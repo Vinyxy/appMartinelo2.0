@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_statusbarcolor/flutter_statusbarcolor.dart';
 import 'navigation.dart';
+
 //import 'package:flutter/services.dart';
 
 void main() {
-  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
   runApp(MaterialApp(
     home: MyApp(),
     debugShowCheckedModeBanner: false,
@@ -49,6 +50,9 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+    FlutterStatusbarcolor.setStatusBarColor(Colors.grey);
+    FlutterStatusbarcolor.setStatusBarWhiteForeground(true);
     return Container(
       color: Colors.white,
       child: Column(

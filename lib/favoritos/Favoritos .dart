@@ -8,9 +8,9 @@ class Favoritos extends StatefulWidget {
   _Favoritos createState() => _Favoritos();
 }
 
-class _Favoritos extends State<Favoritos>{
+class _Favoritos extends State<Favoritos> {
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Center(

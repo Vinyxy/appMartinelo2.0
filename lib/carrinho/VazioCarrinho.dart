@@ -5,71 +5,79 @@ class VazioCarrinho extends StatefulWidget {
 
   @override
   _VazioCarrinho createState() => _VazioCarrinho();
-  }
-  
-  class _VazioCarrinho extends State<VazioCarrinho> {
+}
+
+class _VazioCarrinho extends State<VazioCarrinho> {
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
     return Scaffold(
       body: Center(
         child: Column(
-          children:<Widget>[
-            SizedBox(height: 125,),
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
             Container(
               child: Image.asset('assets/image/ConfirmaCarrinho.png'),
-              height: 100,
+              height: size.width / 4.2,
             ),
-            SizedBox(height: 60,),
+            SizedBox(
+              height: size.width / 8,
+            ),
             Container(
-              child: Text('Bem-vindo ao Carrinho',
+              child: Text(
+                'Bem-vindo ao Carrinho',
                 style: TextStyle(
-                  fontSize: 18,
+                  fontSize: size.width / 24,
                   fontWeight: FontWeight.bold,
                   color: Colors.black,
                   fontFamily: 'Montserrat',
                 ),
               ),
             ),
-            SizedBox(height: 50,),
+            SizedBox(
+              height: size.width / 8,
+            ),
             Container(
               child: Center(
-                  child: Column(
-                    children: <Widget>[
-                      Text(
-                        'Ao adicionar um item',
-                        style: TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.bold,
-                          color: Color.fromRGBO(112, 112, 112, 1),
-                          fontFamily: 'Montserrat',
-                        ),
+                child: Column(
+                  children: <Widget>[
+                    Text(
+                      'Ao adicionar um item',
+                      style: TextStyle(
+                        fontSize: size.width / 30.5,
+                        fontWeight: FontWeight.bold,
+                        color: Color.fromRGBO(112, 112, 112, 1),
+                        fontFamily: 'Montserrat',
                       ),
-                      Text(
-                        'no carrinho, seu valor será somado',
-                        style: TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.bold,
-                          color: Color.fromRGBO(112, 112, 112, 1),
-                          fontFamily: 'Montserrat',
-                        ),
+                    ),
+                    Text(
+                      'no carrinho, seu valor será somado',
+                      style: TextStyle(
+                        fontSize: size.width / 30.5,
+                        fontWeight: FontWeight.bold,
+                        color: Color.fromRGBO(112, 112, 112, 1),
+                        fontFamily: 'Montserrat',
                       ),
-                      Text(
-                        'aos itens existentes.',
-                        style: TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.bold,
-                          color: Color.fromRGBO(112, 112, 112, 1),
-                          fontFamily: 'Montserrat',
-                        ),
+                    ),
+                    Text(
+                      'aos itens existentes.',
+                      style: TextStyle(
+                        fontSize: size.width / 30.5,
+                        fontWeight: FontWeight.bold,
+                        color: Color.fromRGBO(112, 112, 112, 1),
+                        fontFamily: 'Montserrat',
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
+                ),
               ),
             ),
-            SizedBox(height: 60,),
+            SizedBox(
+              height: size.width / 8,
+            ),
             Container(
               child: Image.asset('assets/image/carrinhoCarrinho.png'),
-              height: 125,
+              height: size.width / 3,
             ),
           ],
         ),

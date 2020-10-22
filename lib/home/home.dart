@@ -62,7 +62,6 @@ class _Home extends State<Home> {
           child: Theme(
             data: Theme.of(context).copyWith(accentColor: Colors.black),
             child: Container(
-                height: 27.0,
                 alignment: Alignment.centerLeft,
                 child: Column(
                   children: [
@@ -112,7 +111,6 @@ class _Home extends State<Home> {
                                   ),
                                   title: SafeArea(
                                     child: Container(
-                                      width: size.width,
                                       height: constraints.minHeight / 4.3,
                                       child: Column(
                                         mainAxisAlignment:
@@ -129,7 +127,7 @@ class _Home extends State<Home> {
                                                     'entrega no seu endereço?',
                                                     style: TextStyle(
                                                       color: Colors.black,
-                                                      fontSize: 16,
+                                                      fontSize: size.width / 28,
                                                       fontFamily: 'Montserrat',
                                                     ),
                                                   ),
@@ -159,7 +157,7 @@ class _Home extends State<Home> {
                                                   labelStyle: TextStyle(
                                                     color: Color.fromRGBO(
                                                         112, 112, 112, 1),
-                                                    fontSize: 16,
+                                                    fontSize: size.width / 24,
                                                     fontFamily: 'Montserrat',
                                                   ),
                                                 ),
@@ -174,7 +172,7 @@ class _Home extends State<Home> {
                                                 'Região verificada com sucesso',
                                                 style: TextStyle(
                                                   color: Colors.black,
-                                                  fontSize: 16,
+                                                  fontSize: size.width / 28,
                                                   fontFamily: 'Montserrat',
                                                 ),
                                               ),
@@ -186,8 +184,9 @@ class _Home extends State<Home> {
                                               color: Color.fromRGBO(
                                                   44, 204, 131, 1),
                                               child: Text(
-                                                "verificar",
+                                                "Verificar",
                                                 style: TextStyle(
+                                                  fontSize: size.width / 30,
                                                   color: Colors.white,
                                                 ),
                                               ),
